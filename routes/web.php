@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\GoogleController;
 use App\Http\Controllers\TaskController;
 use Illuminate\Support\Facades\Route;
 
@@ -20,7 +21,13 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('home');
 // });
-Route::get('/', [TaskController::class, 'home']);
+Route::get('/', [TaskController::class, 'login']);
+Route::get('/home', [TaskController::class, 'home']);
+Route::get('/logout', [TaskController::class, 'logout']);
+
+
+Route::get('auth/google', [GoogleController::class, 'redirectToGoogle']);
+Route::get('auth/google/callback', [GoogleController::class, 'handleGoogleCallback']);
 
 Route::post('/todo/store', [TaskController::class, 'store']);
 Route::get('/todo/update/{id}', [TaskController::class, 'update']);

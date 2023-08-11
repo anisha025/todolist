@@ -30,5 +30,10 @@ return [
         'secret' => env('AWS_SECRET_ACCESS_KEY'),
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
+    'google' => [
+        'client_id' => '755474130577-8fbtbsmhmfcpc9oq6s9oih9jahsk8hfi.apps.googleusercontent.com',
+        'client_secret' => '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',
+        'redirect' => 'http://localhost:8000/auth/google/callback'
+    ],
 
 ];

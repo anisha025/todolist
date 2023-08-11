@@ -21,7 +21,7 @@
             <p>Please sign in with your Google account.</p>
         </div>
         <div class="d-grid text-center">
-            <a href="" class="btn btn-success btn-lg"><i class="fa-brands fa-google fa-beat"></i> Sign in with Google</a>
+            <a href="/auth/google" class="btn btn-success btn-lg"><i class="fa-brands fa-google fa-beat"></i> Sign in with Google</a>
         </div>
     </div>
 </body>

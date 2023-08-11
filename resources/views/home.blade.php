@@ -16,9 +16,10 @@
                 <div class="pr-2 dropdown">
                     <!-- Profile Picture -->
                     <div class="d-flex align-items-center">
-                        <img src="" alt="Profile Picture" class="rounded-circle" style="width: 40px; height: 40px;">
+                        <img src="{{auth()->user()->image}}" alt="Profile Picture" class="rounded-circle" style="width: 40px; height: 40px;">
                         <span class="text-light d-block pl-2"></span>
-                        <a href="/todo/logout" class="btn btn-sm btn-danger ml-3">Logout</a>
+
+                        <a href="/logout" class="btn btn-sm btn-danger ml-3">Logout</a>
                     </div>
                     <div class="logout">
 

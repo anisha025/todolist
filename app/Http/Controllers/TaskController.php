@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Task;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
+
 
 class TaskController extends Controller
 {
@@ -15,6 +18,16 @@ class TaskController extends Controller
         $tasks = Task::all();
         return view('home', compact('tasks'));
     }
+    public function login(Request $request)
+    {
+        return view('welcome');
+    }
+    public function logout(Request $request)
+    {
+        Session::flush();
+        Auth::logout();
+        return redirect('/');
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -23,7 +36,14 @@ class TaskController extends Controller
     {
         //
     }
-
+    // public function getshowAllTask()
+    // {
+    //     $task = Task::all();
+    //     return response([
+    //         'status' => 200,
+    //         'data' => $task,
+    //     ]);
+    // }
     /**
      * Store a newly created resource in storage.
      */
